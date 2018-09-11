@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6905B45A213857A700840425 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6905B459213857A700840425 /* SWRevealViewController.m */; };
+		699C92B62138486900DFA934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C92B52138486900DFA934 /* AppDelegate.swift */; };
+		699C92B82138486900DFA934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C92B72138486900DFA934 /* ViewController.swift */; };
+		699C92BB2138486900DFA934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699C92B92138486900DFA934 /* Main.storyboard */; };
+		699C92BD2138486C00DFA934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699C92BC2138486C00DFA934 /* Assets.xcassets */; };
+		699C92C02138486D00DFA934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */; };
+		699C92C821384C6200DFA934 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C92C721384C6200DFA934 /* User.swift */; };
+		699C92CA2138514500DFA934 /* LogInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C92C92138514500DFA934 /* LogInTableViewController.swift */; };
+		699C92CC2138515800DFA934 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C92CB2138515800DFA934 /* SignUpTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6905B457213857A600840425 /* TheraConnect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheraConnect-Bridging-Header.h"; sourceTree = "<group>"; };
+		6905B458213857A700840425 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		6905B459213857A700840425 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		699C92B22138486900DFA934 /* TheraConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheraConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		699C92B52138486900DFA934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		699C92B72138486900DFA934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		699C92BA2138486900DFA934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		699C92BC2138486C00DFA934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		699C92BF2138486D00DFA934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		699C92C12138486D00DFA934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		699C92C721384C6200DFA934 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		699C92C92138514500DFA934 /* LogInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTableViewController.swift; sourceTree = "<group>"; };
+		699C92CB2138515800DFA934 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		699C92AF2138486900DFA934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		699C92A92138486900DFA934 = {
+			isa = PBXGroup;
+			children = (
+				699C92B42138486900DFA934 /* TheraConnect */,
+				699C92B32138486900DFA934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		699C92B32138486900DFA934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				699C92B22138486900DFA934 /* TheraConnect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		699C92B42138486900DFA934 /* TheraConnect */ = {
+			isa = PBXGroup;
+			children = (
+				699C92CD213855A500DFA934 /* Imported */,
+				699C92CE213855C400DFA934 /* Supporting Files */,
+				699C92C721384C6200DFA934 /* User.swift */,
+				699C92C92138514500DFA934 /* LogInTableViewController.swift */,
+				699C92CB2138515800DFA934 /* SignUpTableViewController.swift */,
+			);
+			path = TheraConnect;
+			sourceTree = "<group>";
+		};
+		699C92CD213855A500DFA934 /* Imported */ = {
+			isa = PBXGroup;
+			children = (
+				6905B458213857A700840425 /* SWRevealViewController.h */,
+				6905B459213857A700840425 /* SWRevealViewController.m */,
+				6905B457213857A600840425 /* TheraConnect-Bridging-Header.h */,
+			);
+			path = Imported;
+			sourceTree = "<group>";
+		};
+		699C92CE213855C400DFA934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				699C92B52138486900DFA934 /* AppDelegate.swift */,
+				699C92B72138486900DFA934 /* ViewController.swift */,
+				699C92B92138486900DFA934 /* Main.storyboard */,
+				699C92BC2138486C00DFA934 /* Assets.xcassets */,
+				699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */,
+				699C92C12138486D00DFA934 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		699C92B12138486900DFA934 /* TheraConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 699C92C42138486D00DFA934 /* Build configuration list for PBXNativeTarget "TheraConnect" */;
+			buildPhases = (
+				699C92AE2138486900DFA934 /* Sources */,
+				699C92AF2138486900DFA934 /* Frameworks */,
+				699C92B02138486900DFA934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheraConnect;
+			productName = TheraConnect;
+			productReference = 699C92B22138486900DFA934 /* TheraConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		699C92AA2138486900DFA934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "CC Katz";
+				TargetAttributes = {
+					699C92B12138486900DFA934 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = 699C92AD2138486900DFA934 /* Build configuration list for PBXProject "TheraConnect" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 699C92A92138486900DFA934;
+			productRefGroup = 699C92B32138486900DFA934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				699C92B12138486900DFA934 /* TheraConnect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		699C92B02138486900DFA934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699C92C02138486D00DFA934 /* LaunchScreen.storyboard in Resources */,
+				699C92BD2138486C00DFA934 /* Assets.xcassets in Resources */,
+				699C92BB2138486900DFA934 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		699C92AE2138486900DFA934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699C92CC2138515800DFA934 /* SignUpTableViewController.swift in Sources */,
+				699C92B82138486900DFA934 /* ViewController.swift in Sources */,
+				699C92CA2138514500DFA934 /* LogInTableViewController.swift in Sources */,
+				699C92C821384C6200DFA934 /* User.swift in Sources */,
+				699C92B62138486900DFA934 /* AppDelegate.swift in Sources */,
+				6905B45A213857A700840425 /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		699C92B92138486900DFA934 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				699C92BA2138486900DFA934 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				699C92BF2138486D00DFA934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		699C92C22138486D00DFA934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		699C92C32138486D00DFA934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		699C92C52138486D00DFA934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheraConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CCKatz.TheraConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheraConnect/Imported/TheraConnect-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		699C92C62138486D00DFA934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheraConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CCKatz.TheraConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheraConnect/Imported/TheraConnect-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		699C92AD2138486900DFA934 /* Build configuration list for PBXProject "TheraConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				699C92C22138486D00DFA934 /* Debug */,
+				699C92C32138486D00DFA934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		699C92C42138486D00DFA934 /* Build configuration list for PBXNativeTarget "TheraConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				699C92C52138486D00DFA934 /* Debug */,
+				699C92C62138486D00DFA934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 699C92AA2138486900DFA934 /* Project object */;
+}
