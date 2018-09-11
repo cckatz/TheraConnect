@@ -20,7 +20,7 @@ class User {
         self.type = type
     }
 }
-
+class Guardian: User {}
 class Patient: User {
     
 }
