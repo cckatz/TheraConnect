@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>560556104190-kg2lqvh2jmcpovr8kdhntoq1hd7iej6j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.560556104190-kg2lqvh2jmcpovr8kdhntoq1hd7iej6j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBO8zMModliJ7R4Wgj0v3SzAmpJTKA0KEE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>560556104190</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.CCKatz.TheraConnect</string>
+	<key>PROJECT_ID</key>
+	<string>theraconnect-4099b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>theraconnect-4099b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:560556104190:ios:a65cea7f0eb8f1ba</string>
+	<key>DATABASE_URL</key>
+	<string>https://theraconnect-4099b.firebaseio.com</string>
+</dict>
+</plist>

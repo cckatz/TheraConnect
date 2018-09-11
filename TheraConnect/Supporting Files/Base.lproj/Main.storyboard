@@ -275,6 +275,27 @@
                                                     <rect key="frame" x="152" y="17" width="55" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Sign Up"/>
+                                                    <connections>
+                                                        <action selector="signUpButtonTapped:" destination="Aq5-bb-Pht" eventType="touchUpInside" id="R6E-Ef-CoB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="y6D-AA-ypE">
+                                        <rect key="frame" x="0.0" y="396" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6D-AA-ypE" id="eDd-7E-iT6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-ZK-9Jx">
+                                                    <rect key="frame" x="156" y="17" width="48" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Cancel"/>
+                                                    <connections>
+                                                        <action selector="cancelButtonTapped:" destination="Aq5-bb-Pht" eventType="touchUpInside" id="d6j-W9-MAU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -287,6 +308,15 @@
                             <outlet property="delegate" destination="Aq5-bb-Pht" id="6fl-y6-ziX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="KMr-qu-gSS" id="YWV-6J-XCG"/>
+                        <outlet property="emailTextField" destination="WMz-Eg-mgr" id="YvR-r2-dOo"/>
+                        <outlet property="nameTextField" destination="r36-WF-9Eh" id="Tt3-nT-lia"/>
+                        <outlet property="passwordTextField" destination="5TI-fR-eQh" id="6BK-h2-HXW"/>
+                        <outlet property="signUpButton" destination="XBc-yp-gRO" id="pCz-x8-XkI"/>
+                        <outlet property="userTypeSegment" destination="dOS-1V-yOg" id="aBo-g3-Hb2"/>
+                        <segue destination="qCm-zJ-3WV" kind="show" identifier="signedUp" id="li1-z6-rKz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYk-rH-jMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,4 +390,7 @@
     <resources>
         <image name="Logo" width="710" height="348"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="li1-z6-rKz"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,47 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class SignUpTableViewController: UITableViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    @IBOutlet weak var userTypeSegment: UISegmentedControl!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) { self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
+            // ...
+            guard let user = authResult?.user else { return }
+            print ("Signed Up")
+            self.performSegue(withIdentifier: "signedUp", sender: self)
+        }
+   
+        
+        
 
+        
+        
+        
+        
+     
+        
+    }
+    
     
     
     
@@ -27,22 +65,7 @@ class SignUpTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+ 
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
