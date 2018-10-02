@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--menu-->
+        <scene sceneID="Ahe-Qq-6EI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="menu" id="hJD-fc-F1A" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpy-ht-EGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="585"/>
+        </scene>
         <!--Log In Table View Controller-->
         <scene sceneID="1i6-DJ-mGn">
             <objects>
@@ -95,7 +103,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Log In"/>
                                                     <connections>
-                                                        <segue destination="qCm-zJ-3WV" kind="show" id="VFb-1u-oll"/>
+                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="LogIn" id="eZm-zE-HQh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -277,6 +285,7 @@
                                                     <state key="normal" title="Sign Up"/>
                                                     <connections>
                                                         <action selector="signUpButtonTapped:" destination="Aq5-bb-Pht" eventType="touchUpInside" id="R6E-Ef-CoB"/>
+                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="SignedUp" id="0vT-Lh-Mds"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -315,7 +324,6 @@
                         <outlet property="passwordTextField" destination="5TI-fR-eQh" id="6BK-h2-HXW"/>
                         <outlet property="signUpButton" destination="XBc-yp-gRO" id="pCz-x8-XkI"/>
                         <outlet property="userTypeSegment" destination="dOS-1V-yOg" id="aBo-g3-Hb2"/>
-                        <segue destination="qCm-zJ-3WV" kind="show" identifier="signedUp" id="li1-z6-rKz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYk-rH-jMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,59 +346,25 @@
             <point key="canvasLocation" x="1457" y="120"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="7kU-7g-h3R">
+        <scene sceneID="ZUb-bX-Vv4">
             <objects>
-                <viewController id="LTm-cf-7Ic" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hGC-sy-krE">
+                <viewController id="zQd-IE-3M0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dE-Nv-1jw" customClass="SWRevealView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8K6-DY-Sdh"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2WI-14-DhY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DmS-zW-OXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="745" y="829"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0qH-yv-voh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qCm-zJ-3WV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uz9-9P-nLf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LTm-cf-7Ic" kind="relationship" relationship="rootViewController" id="3w8-4p-mcR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eu7-Me-erG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="89" y="829"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mQD-Gg-uz0">
-            <objects>
-                <viewController id="l76-Ul-3FR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="60C-Nv-Pza">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="qIX-k2-Eyo"/>
+                        <viewLayoutGuide key="safeArea" id="7NL-68-pZX"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LwJ-2e-idc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2z-NF-2zW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="814"/>
+            <point key="canvasLocation" x="1529" y="1485"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="710" height="348"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="li1-z6-rKz"/>
+        <segue reference="0vT-Lh-Mds"/>
     </inferredMetricsTieBreakers>
 </document>

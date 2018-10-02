@@ -27,3 +27,4 @@ class Patient: User {
 class Therapist: User {
     
 }
+

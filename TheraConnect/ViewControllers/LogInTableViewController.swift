@@ -13,6 +13,18 @@ class LogInTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      // Auth.auth().signIn(withEmail: self.email, password: self.password) { (user, error) in
+            // [START_EXCLUDE]
+//            self.hideSpinner {
+//                if let error = error {
+//                    self.showMessagePrompt(error.localizedDescription)
+//                    return
+//                }
+//                self.navigationController!.popViewController(animated: true)
+//            }
+//            // [END_EXCLUDE]
+//        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
