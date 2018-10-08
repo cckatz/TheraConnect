@@ -103,7 +103,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Log In"/>
                                                     <connections>
-                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="LogIn" id="eZm-zE-HQh"/>
+                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="login" id="eZm-zE-HQh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -267,6 +267,7 @@
                                                     <segments>
                                                         <segment title="Therapist"/>
                                                         <segment title="Patient"/>
+                                                        <segment title="Guardian"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -285,7 +286,7 @@
                                                     <state key="normal" title="Sign Up"/>
                                                     <connections>
                                                         <action selector="signUpButtonTapped:" destination="Aq5-bb-Pht" eventType="touchUpInside" id="R6E-Ef-CoB"/>
-                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="SignedUp" id="0vT-Lh-Mds"/>
+                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="signedUp" id="0vT-Lh-Mds"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

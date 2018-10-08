@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 
 class SignUpTableViewController: UITableViewController {
@@ -27,6 +28,7 @@ class SignUpTableViewController: UITableViewController {
     
     @IBAction func cancelButtonTapped(_ sender: Any) { self.dismiss(animated: true, completion: nil)
     }
+    var ref: DatabaseReference!
     
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
@@ -34,6 +36,34 @@ class SignUpTableViewController: UITableViewController {
             // ...
             guard let user = authResult?.user else { return }
             print ("Signed Up")
+            var userType = String()
+            if self.userTypeSegment.selectedSegmentIndex == 0 {
+                userType = "doctors"
+            } else if self.userTypeSegment.selectedSegmentIndex == 1 {
+                userType = "patients"
+            } else if self.userTypeSegment.selectedSegmentIndex == 2 {
+                userType = "guardians"
+                
+            }
+        self.ref.child(userType).child(user.uid).setValue(["username": self.nameTextField.text!])
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             self.performSegue(withIdentifier: "signedUp", sender: self)
         }
    
@@ -57,7 +87,7 @@ class SignUpTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ref = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
