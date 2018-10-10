@@ -7,9 +7,28 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LogInTableViewController: UITableViewController {
-
+ 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
+    
+    
+    @IBAction func logInButtonTapped(_ sender: Any) {
+        Auth.auth().signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error == nil {
+                print("signIn")
+                self.performSegue(withIdentifier: "login", sender: self)
+            } else {
+                print(error)
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

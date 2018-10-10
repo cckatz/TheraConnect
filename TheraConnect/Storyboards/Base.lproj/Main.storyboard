@@ -103,7 +103,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Log In"/>
                                                     <connections>
-                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="login" id="eZm-zE-HQh"/>
+                                                        <action selector="logInButtonTapped:" destination="AE3-WR-plJ" eventType="touchUpInside" id="Y4v-WR-xGp"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -135,6 +135,11 @@
                             <outlet property="delegate" destination="AE3-WR-plJ" id="Ai0-rB-Ob0"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="passwordTextField" destination="iXI-aE-KE0" id="bmL-hy-qzT"/>
+                        <outlet property="usernameTextField" destination="DZC-Ys-9W5" id="L3h-Du-Kdp"/>
+                        <segue destination="hJD-fc-F1A" kind="show" identifier="login" id="DcY-A1-2Y8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlR-jy-wpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,7 +271,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
                                                         <segment title="Therapist"/>
-                                                        <segment title="Patient"/>
                                                         <segment title="Guardian"/>
                                                     </segments>
                                                 </segmentedControl>
@@ -366,6 +370,6 @@
         <image name="Logo" width="710" height="348"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0vT-Lh-Mds"/>
+        <segue reference="DcY-A1-2Y8"/>
     </inferredMetricsTieBreakers>
 </document>
