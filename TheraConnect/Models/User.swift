@@ -8,23 +8,21 @@
 
 import Foundation
 
+enum UserType: String {
+    case guardian, patient, therapist
+}
+
 class User {
     let name: String
     let email: String
     let username: String
-    let type: User
-    init(name: String, email: String, username: String, type: User) {
+    let type: UserType
+    init(name: String, email: String, username: String, type: UserType) {
         self.name = name
         self.email = email
         self.username = username
         self.type = type
     }
 }
-class Guardian: User {}
-class Patient: User {
-    
-}
-class Therapist: User {
-    
-}
+
 
