@@ -38,9 +38,9 @@ class SignUpTableViewController: UITableViewController {
             print ("Signed Up")
             var userType = String()
             if self.userTypeSegment.selectedSegmentIndex == 0 {
-                userType = "patient"
-            } else if self.userTypeSegment.selectedSegmentIndex == 1 {
                 userType = "doctor"
+            } else if self.userTypeSegment.selectedSegmentIndex == 1 {
+                userType = "patient"
                 
                 
             }
