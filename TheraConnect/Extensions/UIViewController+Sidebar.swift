@@ -20,8 +20,6 @@ extension UIViewController {
             self.editButtonItem.action =
                 #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-
-    }
-    
+        }
     }
 }

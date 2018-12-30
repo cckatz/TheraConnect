@@ -8,28 +8,20 @@
 
 import UIKit
 import FirebaseAuth
+
 class LogInTableViewController: UITableViewController {
  
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
     @IBAction func logInButtonTapped(_ sender: Any) {
-        Auth.auth().signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
-            if error == nil {
-                print("signIn")
-                self.performSegue(withIdentifier: "login", sender: self)
-            } else {
-                print(error)
-            }
-        }
-        
-     
-        
+        signIn()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpKeyboardFunctions()
+        _ = [usernameTextField, passwordTextField].map { $0?.delegate = self }
       // Auth.auth().signIn(withEmail: self.email, password: self.password) { (user, error) in
             // [START_EXCLUDE]
 //            self.hideSpinner {
@@ -49,8 +41,16 @@ class LogInTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    
-    
+    fileprivate func signIn() {
+        Auth.auth().signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error == nil {
+                print("signIn")
+                self.performSegue(withIdentifier: "login", sender: self)
+            } else {
+                print(error)
+            }
+        }
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,4 +107,19 @@ class LogInTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension LogInTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+
+        if textField == passwordTextField {
+            textField.resignFirstResponder()
+            signIn()
+        }
+
+        return true
+    }
 }

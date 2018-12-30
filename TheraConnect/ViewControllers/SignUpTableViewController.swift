@@ -14,36 +14,30 @@ import FirebaseDatabase
 class SignUpTableViewController: UITableViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
     @IBOutlet weak var userTypeSegment: UISegmentedControl!
-    
     @IBOutlet weak var signUpButton: UIButton!
-    
-    
+
+    var ref: DatabaseReference!
+
     @IBAction func cancelButtonTapped(_ sender: Any) { self.dismiss(animated: true, completion: nil)
     }
-    var ref: DatabaseReference!
-    
-    
+
     @IBAction func signUpButtonTapped(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             // ...
             guard let user = authResult?.user else { return }
             print ("Signed Up")
             var userType = String()
+
             if self.userTypeSegment.selectedSegmentIndex == 0 {
                 userType = "doctor"
             } else if self.userTypeSegment.selectedSegmentIndex == 1 {
                 userType = "patient"
-                
-                
             }
+
             self.ref.child("users").child(user.uid).setValue([
                 "username": self.nameTextField.text!,
                 "userType":userType
@@ -52,35 +46,19 @@ class SignUpTableViewController: UITableViewController {
             
             self.performSegue(withIdentifier: "signedUp", sender: self)
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setUpKeyboardFunctions()
     }
-    
+
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//
+//        removeObserversForKeyboard()
+//    }
     
     
     /*
