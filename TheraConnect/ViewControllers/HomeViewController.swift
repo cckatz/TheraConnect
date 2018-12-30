@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
         setUpSidebar ()
         
         testNote()
-
     }
 
     func testNote () {
