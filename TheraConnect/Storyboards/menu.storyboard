@@ -94,8 +94,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC2-kW-t2J">
-                                                    <rect key="frame" x="32" y="7" width="123" height="30"/>
-                                                    <state key="normal" title="Progress Updates"/>
+                                                    <rect key="frame" x="32" y="7" width="58" height="30"/>
+                                                    <state key="normal" title="Updates"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -130,13 +130,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWW-xB-5eB">
-                                                    <rect key="frame" x="32" y="7" width="70" height="30"/>
-                                                    <state key="normal" title="Messages"/>
+                                                    <rect key="frame" x="32" y="7" width="41" height="30"/>
+                                                    <state key="normal" title="Notes"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wWW-xB-5eB" firstAttribute="leading" secondItem="1dM-DG-8QK" secondAttribute="leadingMargin" constant="16" id="0sC-kJ-WlJ"/>
                                                 <constraint firstItem="wWW-xB-5eB" firstAttribute="centerY" secondItem="1dM-DG-8QK" secondAttribute="centerY" id="nho-lp-DLi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="urC-eC-rqt">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urC-eC-rqt" id="eCT-lb-XWb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhT-uD-rwU">
+                                                    <rect key="frame" x="32" y="7" width="118" height="30"/>
+                                                    <state key="normal" title="Account Settings"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OhT-uD-rwU" firstAttribute="centerY" secondItem="eCT-lb-XWb" secondAttribute="centerY" id="Hc6-aU-5Jl"/>
+                                                <constraint firstItem="OhT-uD-rwU" firstAttribute="leading" secondItem="eCT-lb-XWb" secondAttribute="leadingMargin" constant="16" id="a6G-Iw-xhe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

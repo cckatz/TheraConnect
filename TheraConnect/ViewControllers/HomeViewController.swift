@@ -18,9 +18,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        setUpSidebar ()
+        setUpSidebar()
+
         
-        testNote()
+        
+//        testNote()
     }
 
     func testNote () {
@@ -37,6 +39,5 @@ class HomeViewController: UIViewController {
             ]
         )
     }
-
 
 }

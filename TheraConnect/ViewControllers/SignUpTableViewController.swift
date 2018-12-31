@@ -22,98 +22,79 @@ class SignUpTableViewController: UITableViewController {
 
     var ref: DatabaseReference!
 
-    @IBAction func cancelButtonTapped(_ sender: Any) { self.dismiss(animated: true, completion: nil)
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
-            // ...
-            guard let user = authResult?.user else { return }
-            print ("Signed Up")
-            var userType = String()
+        guard let userName = nameTextField.text else { return }
+        guard passwordTextField.text == confirmPasswordTextField.text else {
+            self.presentAlert("Error", message: "Passwords must match")
+            return
+        }
 
-            if self.userTypeSegment.selectedSegmentIndex == 0 {
-                userType = "doctor"
-            } else if self.userTypeSegment.selectedSegmentIndex == 1 {
-                userType = "patient"
+        guard let password = passwordTextField.text else { return }
+        guard let email = emailTextField.text else { return }
+
+        let userType: UserType = userTypeSegment.selectedSegmentIndex == 0 ? .doctor : .patient
+
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authResult, error) in
+
+            if let error = error {
+                self?.presentAlert("Error", message: error.localizedDescription)
             }
 
-            self.ref.child("users").child(user.uid).setValue([
-                "username": self.nameTextField.text!,
-                "userType":userType
-                
+            guard let user = authResult?.user else { return }
+
+            let profileUpdate = Auth.auth().currentUser?.createProfileChangeRequest()
+            profileUpdate?.displayName = userName
+            profileUpdate?.commitChanges(completion: { (error) in
+                self?.presentAlert("Error", message: error?.localizedDescription)
+            })
+
+            self?.ref.child("users").child(user.uid).setValue([
+                "username": userName,
+                "userType": userType.rawValue
                 ])
+
+            UserDefaults.standard.set(email, forKey: "username")
             
-            self.performSegue(withIdentifier: "signedUp", sender: self)
+            self?.performSegue(withIdentifier: "signedUp", sender: self)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         ref = Database.database().reference()
         setUpKeyboardFunctions()
+
+        [nameTextField,
+         emailTextField,
+         passwordTextField,
+         confirmPasswordTextField]
+            .forEach { $0?.delegate = self }
     }
 
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//
-//        removeObserversForKeyboard()
-//    }
-    
-    
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+}
+
+extension SignUpTableViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            confirmPasswordTextField.becomeFirstResponder()
+        case confirmPasswordTextField:
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+
+        return false
+    }
+
 }

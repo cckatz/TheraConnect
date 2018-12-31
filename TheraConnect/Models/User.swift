@@ -9,7 +9,7 @@
 import Foundation
 
 enum UserType: String {
-    case guardian, patient, therapist
+    case doctor, patient
 }
 
 class User {
@@ -17,11 +17,14 @@ class User {
     let email: String
     let username: String
     let type: UserType
-    init(name: String, email: String, username: String, type: UserType) {
+    let relationships: [String]?
+    
+    init(name: String, email: String, username: String, type: UserType, relationships: [String]?) {
         self.name = name
         self.email = email
         self.username = username
         self.type = type
+        self.relationships = relationships
     }
 }
 

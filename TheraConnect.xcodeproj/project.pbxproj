@@ -22,6 +22,7 @@
 		69C5921421A89C9C006E29CF /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5921321A89C9C006E29CF /* Report.swift */; };
 		69F4A4B0216C030800B0682B /* UIViewController+Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4A4AF216C030800B0682B /* UIViewController+Sidebar.swift */; };
 		9E5696CD21D96EAB0022A3C1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5696CC21D96EAB0022A3C1 /* UIViewController+Keyboard.swift */; };
+		9E5696CF21D9BBFF0022A3C1 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */; };
 		F61117BD892B4CED0260C0EE /* Pods_TheraConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8065ABA0221306870B31D6D /* Pods_TheraConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		69C5921321A89C9C006E29CF /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		69F4A4AF216C030800B0682B /* UIViewController+Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Sidebar.swift"; sourceTree = "<group>"; };
 		9E5696CC21D96EAB0022A3C1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		B1F683C64EBD574DCEA4531F /* Pods-TheraConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheraConnect/Pods-TheraConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		B8065ABA0221306870B31D6D /* Pods_TheraConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheraConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,10 +138,10 @@
 		69C4A6FD21643BBC00467169 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				699C92B92138486900DFA934 /* Main.storyboard */,
-				699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */,
-				69C4A6F82164370A00467169 /* menu.storyboard */,
 				69C4A6FA216439F200467169 /* Home.storyboard */,
+				699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */,
+				699C92B92138486900DFA934 /* Main.storyboard */,
+				69C4A6F82164370A00467169 /* menu.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 			children = (
 				69F4A4AF216C030800B0682B /* UIViewController+Sidebar.swift */,
 				9E5696CC21D96EAB0022A3C1 /* UIViewController+Keyboard.swift */,
+				9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				699C92C821384C6200DFA934 /* User.swift in Sources */,
 				69C5921421A89C9C006E29CF /* Report.swift in Sources */,
 				9E5696CD21D96EAB0022A3C1 /* UIViewController+Keyboard.swift in Sources */,
+				9E5696CF21D9BBFF0022A3C1 /* UIViewController+Alert.swift in Sources */,
 				69F4A4B0216C030800B0682B /* UIViewController+Sidebar.swift in Sources */,
 				699C92B62138486900DFA934 /* AppDelegate.swift in Sources */,
 				6905B45A213857A700840425 /* SWRevealViewController.m in Sources */,

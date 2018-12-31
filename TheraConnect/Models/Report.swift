@@ -8,19 +8,6 @@
 
 import Foundation
 
-
-//class User {
-//    let name: String
-//    let email: String
-//    let username: String
-//    let type: UserType
-//    init(name: String, email: String, username: String, type: UserType) {
-//        self.name = name
-//        self.email = email
-//        self.username = username
-//        self.type = type
-//    }
-//}
 class Note {
     let message: String
     let date: String
@@ -29,6 +16,7 @@ class Note {
     let ID: String?
     let doctorID: String?
     let patientID: String?
+
     init(
         message: String,
         date: String,
@@ -45,7 +33,5 @@ class Note {
         self.doctorID = doctorID
         self.patientID = patientID
     }
-    
-    
-    
+
 }
