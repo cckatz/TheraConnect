@@ -10,17 +10,34 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 class SignUpTableViewController: UITableViewController {
-    
+
+    // MARK: - Properties and Outlets
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+
     @IBOutlet weak var userTypeSegment: UISegmentedControl!
     @IBOutlet weak var signUpButton: UIButton!
 
     var ref: DatabaseReference!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        ref = Database.database().reference()
+        setUpKeyboardFunctions()
+
+        [nameTextField,
+         emailTextField,
+         passwordTextField,
+         confirmPasswordTextField]
+            .forEach { $0?.delegate = self }
+    }
+
+    // MARK: - Functions and Methods
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -28,18 +45,30 @@ class SignUpTableViewController: UITableViewController {
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
         guard let userName = nameTextField.text else { return }
-        guard passwordTextField.text == confirmPasswordTextField.text else {
+        guard let password = passwordTextField.text else { return }
+        guard let confirm = confirmPasswordTextField.text else { return }
+        guard let email = emailTextField.text else { return }
+
+        guard password == confirm else {
             self.presentAlert("Error", message: "Passwords must match")
             return
         }
 
-        guard let password = passwordTextField.text else { return }
-        guard let email = emailTextField.text else { return }
+        guard userName.count > 0
+            && password.count > 0
+            && confirm.count > 0
+            && email.count > 0 else {
+                presentAlert("Error", message: "Please fill out all values.")
+                return
+        }
 
         let userType: UserType = userTypeSegment.selectedSegmentIndex == 0 ? .doctor : .patient
 
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authResult, error) in
+        attemptSignIn(userName: userName, email: email, password: password, userType: userType)
+    }
 
+    private func attemptSignIn(userName: String, email: String, password: String, userType: UserType) {
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authResult, error) in
             if let error = error {
                 self?.presentAlert("Error", message: error.localizedDescription)
             }
@@ -58,22 +87,9 @@ class SignUpTableViewController: UITableViewController {
                 ])
 
             UserDefaults.standard.set(email, forKey: "username")
-            
+
             self?.performSegue(withIdentifier: "signedUp", sender: self)
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        ref = Database.database().reference()
-        setUpKeyboardFunctions()
-
-        [nameTextField,
-         emailTextField,
-         passwordTextField,
-         confirmPasswordTextField]
-            .forEach { $0?.delegate = self }
     }
 
 }

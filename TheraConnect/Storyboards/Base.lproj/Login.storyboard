@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--menu-->
+        <!--Menu-->
         <scene sceneID="Ahe-Qq-6EI">
             <objects>
-                <viewControllerPlaceholder storyboardName="menu" id="hJD-fc-F1A" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Menu" id="hJD-fc-F1A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpy-ht-EGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="445" y="585"/>
@@ -37,7 +37,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QhZ-BB-hc3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="205.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -159,7 +159,9 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="loginButton" destination="yQ1-I9-7ah" id="uGt-NI-G9F"/>
                         <outlet property="passwordTextField" destination="iXI-aE-KE0" id="bmL-hy-qzT"/>
+                        <outlet property="signupButton" destination="0j5-di-2xX" id="B6P-bD-IKa"/>
                         <outlet property="usernameTextField" destination="DZC-Ys-9W5" id="L3h-Du-Kdp"/>
                         <segue destination="hJD-fc-F1A" kind="show" identifier="login" id="DcY-A1-2Y8"/>
                     </connections>
@@ -253,7 +255,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5TI-fR-eQh">
-                                                    <rect key="frame" x="16" y="53" width="343" height="30.5"/>
+                                                    <rect key="frame" x="16" y="53" width="343" height="31"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -283,7 +285,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMr-qu-gSS">
-                                                    <rect key="frame" x="16" y="53.5" width="343" height="30"/>
+                                                    <rect key="frame" x="16" y="54" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -338,7 +340,6 @@
                                                     <state key="normal" title="Sign Up"/>
                                                     <connections>
                                                         <action selector="signUpButtonTapped:" destination="Aq5-bb-Pht" eventType="touchUpInside" id="R6E-Ef-CoB"/>
-                                                        <segue destination="hJD-fc-F1A" kind="show" identifier="signedUp" id="0vT-Lh-Mds"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -384,6 +385,7 @@
                         <outlet property="passwordTextField" destination="5TI-fR-eQh" id="6BK-h2-HXW"/>
                         <outlet property="signUpButton" destination="XBc-yp-gRO" id="pCz-x8-XkI"/>
                         <outlet property="userTypeSegment" destination="dOS-1V-yOg" id="aBo-g3-Hb2"/>
+                        <segue destination="hJD-fc-F1A" kind="show" identifier="signedUp" id="Fhm-kO-ygn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYk-rH-jMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,6 +412,6 @@
         <image name="Logo" width="355" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0vT-Lh-Mds"/>
+        <segue reference="Fhm-kO-ygn"/>
     </inferredMetricsTieBreakers>
 </document>

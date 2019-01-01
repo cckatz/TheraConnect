@@ -35,12 +35,12 @@
                 <viewControllerPlaceholder storyboardName="Home" id="t9X-Dk-qHb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPM-PZ-gbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="-222"/>
+            <point key="canvasLocation" x="461" y="548"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="bZ9-E2-rId">
             <objects>
-                <tableViewController id="hlL-Ec-6ki" sceneMemberID="viewController">
+                <tableViewController id="hlL-Ec-6ki" customClass="MenuTableViewController" customModule="TheraConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Oz-Lb-y5O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,6 +155,27 @@
                                             <constraints>
                                                 <constraint firstItem="OhT-uD-rwU" firstAttribute="centerY" secondItem="eCT-lb-XWb" secondAttribute="centerY" id="Hc6-aU-5Jl"/>
                                                 <constraint firstItem="OhT-uD-rwU" firstAttribute="leading" secondItem="eCT-lb-XWb" secondAttribute="leadingMargin" constant="16" id="a6G-Iw-xhe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="jnM-xH-okf">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jnM-xH-okf" id="c5a-y9-QNN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-34-czn">
+                                                    <rect key="frame" x="32" y="7" width="55" height="30"/>
+                                                    <state key="normal" title="Log Out"/>
+                                                    <connections>
+                                                        <action selector="logoutButtonTapped:" destination="hlL-Ec-6ki" eventType="touchUpInside" id="rLf-wf-Fjh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PnV-34-czn" firstAttribute="leading" secondItem="c5a-y9-QNN" secondAttribute="leadingMargin" constant="16" id="N77-2G-r0e"/>
+                                                <constraint firstItem="PnV-34-czn" firstAttribute="centerY" secondItem="c5a-y9-QNN" secondAttribute="centerY" id="p4J-ci-IMQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

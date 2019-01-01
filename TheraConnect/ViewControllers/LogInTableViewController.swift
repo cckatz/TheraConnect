@@ -10,47 +10,43 @@ import UIKit
 import FirebaseAuth
 
 class LogInTableViewController: UITableViewController {
- 
+
+    // MARK: - Outlets and Properties
+
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var signupButton: UIButton!
+    
     @IBAction func logInButtonTapped(_ sender: Any) {
         signIn()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpKeyboardFunctions()
-
-        [usernameTextField, passwordTextField].forEach { $0?.delegate = self }
-
-        if let username = UserDefaults.standard.string(forKey: "username"),
-            let password = UserDefaults.standard.string(forKey: "password") {
-            usernameTextField.text = username
-            passwordTextField.text = password
-        }
-
-      // Auth.auth().signIn(withEmail: self.email, password: self.password) { (user, error) in
-            // [START_EXCLUDE]
-//            self.hideSpinner {
-//                if let error = error {
-//                    self.showMessagePrompt(error.localizedDescription)
-//                    return
-//                }
-//                self.navigationController!.popViewController(animated: true)
-//            }
-//            // [END_EXCLUDE]
-//        }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupTextFields()
     }
 
-    fileprivate func signIn() {
+    // MARK: - Functions and Methods
+    
+    private func setupTextFields() {
+        [usernameTextField, passwordTextField].forEach { $0?.delegate = self }
+        passwordTextField.clearsOnBeginEditing = true
+
+        if let username = UserDefaults.standard.string(forKey: "username") {
+            usernameTextField.text = username
+        }
+    }
+
+    private func signIn() {
+        guard loginButton.isEnabled == true else { return }
+
+        print("Signing in?")
+        switchButtons(turnOn: false)
+
         guard let username = usernameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
 
@@ -61,12 +57,17 @@ class LogInTableViewController: UITableViewController {
             if error == nil {
                 UserDefaults.standard.set(username, forKey: "username")
                 UserDefaults.standard.set(password, forKey: "password")
-
+                self?.switchButtons()
                 self?.performSegue(withIdentifier: "login", sender: self)
             } else {
+                self?.switchButtons()
                 self?.presentAlert("Error", message: error?.localizedDescription)
             }
         }
+    }
+
+    private func switchButtons(turnOn: Bool = true) {
+        [loginButton, signupButton].forEach { $0?.isEnabled = turnOn }
     }
 
 }
@@ -79,8 +80,8 @@ extension LogInTableViewController: UITextFieldDelegate {
         }
 
         if textField == passwordTextField {
-            textField.resignFirstResponder()
             signIn()
+            textField.resignFirstResponder()
         }
 
         return true
