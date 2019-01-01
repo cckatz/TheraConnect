@@ -152,8 +152,8 @@
 		69C4A6FE21643BE100467169 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				699C92C721384C6200DFA934 /* User.swift */,
 				69C5921321A89C9C006E29CF /* Report.swift */,
+				699C92C721384C6200DFA934 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

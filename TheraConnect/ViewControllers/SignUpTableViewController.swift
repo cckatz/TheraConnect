@@ -97,16 +97,10 @@ class SignUpTableViewController: UITableViewController {
 extension SignUpTableViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case nameTextField:
-            emailTextField.becomeFirstResponder()
-        case emailTextField:
-            passwordTextField.becomeFirstResponder()
-        case passwordTextField:
-            confirmPasswordTextField.becomeFirstResponder()
-        case confirmPasswordTextField:
-            textField.resignFirstResponder()
-        default:
+        if let nextField = view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
             textField.resignFirstResponder()
         }
 
