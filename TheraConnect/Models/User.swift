@@ -13,18 +13,19 @@ enum UserType: String {
 }
 
 class User {
+    let id: String
     let name: String
     let email: String
-    let username: String
     let type: UserType
     let relationships: [String]?
-    
-    init(name: String, email: String, username: String, type: UserType, relationships: [String]?) {
+
+    init(id: String, name: String, email: String, type: UserType, relationships: [String]?) {
+        self.id = id
         self.name = name
         self.email = email
-        self.username = username
         self.type = type
         self.relationships = relationships
+
     }
 }
 

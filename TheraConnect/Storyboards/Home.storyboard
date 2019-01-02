@@ -20,11 +20,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="url-aN-cLQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dgh-9y-zcJ"/>
+                    <navigationItem key="navigationItem" id="dgh-9y-zcJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ack-14-2jm">
+                            <connections>
+                                <segue destination="Q5Q-tz-UTe" kind="show" id="3FK-Nh-yVr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLd-7K-FDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152.8" y="143.47826086956522"/>
+        </scene>
+        <!--CreateNote-->
+        <scene sceneID="nsX-gd-206">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateNote" id="Q5Q-tz-UTe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hap-L2-6Fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qCi-TP-cIf">

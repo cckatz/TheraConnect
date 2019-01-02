@@ -12,7 +12,13 @@ import FirebaseAuth
 class MenuTableViewController: UITableViewController {
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        }
+        catch {
+            presentAlert("Error", message: error.localizedDescription)
+        }
     }
 
 }

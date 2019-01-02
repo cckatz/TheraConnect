@@ -19,11 +19,15 @@
 		69C4A6F92164370A00467169 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C4A6F82164370A00467169 /* Menu.storyboard */; };
 		69C4A6FB216439F200467169 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C4A6FA216439F200467169 /* Home.storyboard */; };
 		69C4A70021643C3C00467169 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C4A6FF21643C3C00467169 /* HomeViewController.swift */; };
-		69C5921421A89C9C006E29CF /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5921321A89C9C006E29CF /* Report.swift */; };
+		69C5921421A89C9C006E29CF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5921321A89C9C006E29CF /* Note.swift */; };
 		69F4A4B0216C030800B0682B /* UIViewController+Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4A4AF216C030800B0682B /* UIViewController+Sidebar.swift */; };
 		9E5696CD21D96EAB0022A3C1 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5696CC21D96EAB0022A3C1 /* UIViewController+Keyboard.swift */; };
 		9E5696CF21D9BBFF0022A3C1 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */; };
 		9E5696D121DAF01C0022A3C1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5696D021DAF01C0022A3C1 /* MenuTableViewController.swift */; };
+		9EC2B28C21DC410300893CE9 /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2B28B21DC410300893CE9 /* LoggedInUser.swift */; };
+		9EC2B28F21DC457600893CE9 /* CreateNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC2B28E21DC457600893CE9 /* CreateNote.storyboard */; };
+		9EC2B29121DC4AE300893CE9 /* CreateNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2B29021DC4AE300893CE9 /* CreateNoteTableViewController.swift */; };
+		9EC2B29321DC4CC500893CE9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2B29221DC4CC500893CE9 /* DateManager.swift */; };
 		F61117BD892B4CED0260C0EE /* Pods_TheraConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8065ABA0221306870B31D6D /* Pods_TheraConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,11 +49,15 @@
 		69C4A6F82164370A00467169 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		69C4A6FA216439F200467169 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		69C4A6FF21643C3C00467169 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		69C5921321A89C9C006E29CF /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		69C5921321A89C9C006E29CF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		69F4A4AF216C030800B0682B /* UIViewController+Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Sidebar.swift"; sourceTree = "<group>"; };
 		9E5696CC21D96EAB0022A3C1 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		9E5696D021DAF01C0022A3C1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		9EC2B28B21DC410300893CE9 /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
+		9EC2B28E21DC457600893CE9 /* CreateNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateNote.storyboard; sourceTree = "<group>"; };
+		9EC2B29021DC4AE300893CE9 /* CreateNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteTableViewController.swift; sourceTree = "<group>"; };
+		9EC2B29221DC4CC500893CE9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		B1F683C64EBD574DCEA4531F /* Pods-TheraConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheraConnect/Pods-TheraConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		B8065ABA0221306870B31D6D /* Pods_TheraConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheraConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +107,7 @@
 				9E5696CB21D885BB0022A3C1 /* Extensions */,
 				699C92CD213855A500DFA934 /* Imported */,
 				69C4A6FE21643BE100467169 /* Models */,
+				9EC2B28D21DC41D700893CE9 /* Managers */,
 				69C4A6FD21643BBC00467169 /* Storyboards */,
 				699C92CE213855C400DFA934 /* Supporting Files */,
 				69C4A6FC21643B9300467169 /* ViewControllers */,
@@ -130,10 +139,9 @@
 		69C4A6FC21643B9300467169 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				69C4A6FF21643C3C00467169 /* HomeViewController.swift */,
-				699C92C92138514500DFA934 /* LogInTableViewController.swift */,
-				699C92CB2138515800DFA934 /* SignUpTableViewController.swift */,
-				9E5696D021DAF01C0022A3C1 /* MenuTableViewController.swift */,
+				9EC2B28A21DC3F6300893CE9 /* Main Flow */,
+				9EC2B28921DC3F4E00893CE9 /* Login Flow */,
+				9EC2B29421DCB25300893CE9 /* Create Note Flow */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				699C92BE2138486D00DFA934 /* LaunchScreen.storyboard */,
 				699C92B92138486900DFA934 /* Login.storyboard */,
 				69C4A6F82164370A00467169 /* Menu.storyboard */,
+				9EC2B28E21DC457600893CE9 /* CreateNote.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -152,7 +161,7 @@
 		69C4A6FE21643BE100467169 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				69C5921321A89C9C006E29CF /* Report.swift */,
+				69C5921321A89C9C006E29CF /* Note.swift */,
 				699C92C721384C6200DFA934 /* User.swift */,
 			);
 			path = Models;
@@ -166,6 +175,41 @@
 				9E5696CE21D9BBFF0022A3C1 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EC2B28921DC3F4E00893CE9 /* Login Flow */ = {
+			isa = PBXGroup;
+			children = (
+				699C92C92138514500DFA934 /* LogInTableViewController.swift */,
+				699C92CB2138515800DFA934 /* SignUpTableViewController.swift */,
+			);
+			path = "Login Flow";
+			sourceTree = "<group>";
+		};
+		9EC2B28A21DC3F6300893CE9 /* Main Flow */ = {
+			isa = PBXGroup;
+			children = (
+				69C4A6FF21643C3C00467169 /* HomeViewController.swift */,
+				9E5696D021DAF01C0022A3C1 /* MenuTableViewController.swift */,
+			);
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		9EC2B28D21DC41D700893CE9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9EC2B28B21DC410300893CE9 /* LoggedInUser.swift */,
+				9EC2B29221DC4CC500893CE9 /* DateManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9EC2B29421DCB25300893CE9 /* Create Note Flow */ = {
+			isa = PBXGroup;
+			children = (
+				9EC2B29021DC4AE300893CE9 /* CreateNoteTableViewController.swift */,
+			);
+			path = "Create Note Flow";
 			sourceTree = "<group>";
 		};
 		BC1E3BA202ACF63E20BFCA7C /* Frameworks */ = {
@@ -237,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC2B28F21DC457600893CE9 /* CreateNote.storyboard in Resources */,
 				699C92C02138486D00DFA934 /* LaunchScreen.storyboard in Resources */,
 				69A53F5E214862DA000155F3 /* GoogleService-Info.plist in Resources */,
 				699C92BD2138486C00DFA934 /* Assets.xcassets in Resources */,
@@ -302,11 +347,14 @@
 				699C92CA2138514500DFA934 /* LogInTableViewController.swift in Sources */,
 				9E5696D121DAF01C0022A3C1 /* MenuTableViewController.swift in Sources */,
 				699C92C821384C6200DFA934 /* User.swift in Sources */,
-				69C5921421A89C9C006E29CF /* Report.swift in Sources */,
+				69C5921421A89C9C006E29CF /* Note.swift in Sources */,
+				9EC2B28C21DC410300893CE9 /* LoggedInUser.swift in Sources */,
 				9E5696CD21D96EAB0022A3C1 /* UIViewController+Keyboard.swift in Sources */,
+				9EC2B29321DC4CC500893CE9 /* DateManager.swift in Sources */,
 				9E5696CF21D9BBFF0022A3C1 /* UIViewController+Alert.swift in Sources */,
 				69F4A4B0216C030800B0682B /* UIViewController+Sidebar.swift in Sources */,
 				699C92B62138486900DFA934 /* AppDelegate.swift in Sources */,
+				9EC2B29121DC4AE300893CE9 /* CreateNoteTableViewController.swift in Sources */,
 				6905B45A213857A700840425 /* SWRevealViewController.m in Sources */,
 				69C4A70021643C3C00467169 /* HomeViewController.swift in Sources */,
 			);

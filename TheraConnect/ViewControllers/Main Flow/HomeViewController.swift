@@ -19,16 +19,20 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         setUpSidebar()
-
         
-        
-//        testNote()
+        // TODO: - Load notes
+//        let doc = User(id: "12345", name: "Dr. Chicken", email: "drchick@en.com", username: "what", type: .doctor, relationships: nil)
+//
+//        testNote(doc)
     }
 
-    func testNote () {
-        let key = ref.childByAutoId().key
+    func createNote(_ recipient: User) {
+        guard let user = LoggedInUser.shared.user else { return }
 
-        let testNote = Note(message: "Hello", date: "10/22/18", doctorName: "Dr. Dan", patientName: "Jane", ID: nil, doctorID: nil, patientID: nil)
+        let key = ref.childByAutoId().key
+        let now = DateManager.shared.createNowDateString()
+        
+        let testNote = Note(message: "Hello", date: now, doctorName: recipient.name, patientName: user.name, ID: nil, doctorID: nil, patientID: user.email)
 
         self.ref.child("notes").child(key).setValue([
             "message": testNote.message,
@@ -36,8 +40,9 @@ class HomeViewController: UIViewController {
             "doctorName": testNote.doctorName,
             "patientName": testNote.patientName,
             "id": key
-            ]
-        )
+            ])
+
+        print(DateManager.shared.convertString(now, format: .long))
     }
 
 }

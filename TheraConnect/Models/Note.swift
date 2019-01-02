@@ -1,5 +1,5 @@
 //
-//  Report.swift
+//  Note.swift
 //  TheraConnect
 //
 //  Created by CC Katz on 11/23/18.
